@@ -18,13 +18,13 @@ end
                 country: Faker::Address.country)
 end
 
-5.times do |i|
-  Product.all.each do |product|
+250.times do |i|
+    products = Product.all
+    product = products[rand(0..49)]
     product.reviews.create(author: Faker::Name.first_name,
                           content_body: Faker::Lorem.sentences(3),
                           rating: rand(1..5)
                           )
-  end
 end
 p "created #{Product.count} products"
 p "created #{Review.count} Reviews"
