@@ -1,0 +1,22 @@
+<div class="">
+  <h1>Most Reviewed Item</h1>
+    <ul>
+      <li><%= @popular_product.name %></li>
+    </ul>
+</div>
+<div class="">
+  <h1>Newest Items</h1>
+    <ol>
+      <% @recent_products.each do |product| %>
+        <li><%= product.name %></li>
+      <% end %>
+    </ol>
+</div>
+<div class="">
+  <h1>Local Items</h1>
+  <ol>
+    <% @local_products.each do |product| %>
+      <li><%= product.name %></li>
+    <% end %>
+  </ol>
+</div>
