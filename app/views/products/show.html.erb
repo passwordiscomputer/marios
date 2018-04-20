@@ -1,0 +1,16 @@
+<div class="row">
+  <div><%= @product.name %></div>
+</div>
+
+<ul class="collection">
+  <% @reviews.each do |review| %>
+    <li class="collection-item avatar">
+      <p>
+        <span class="rating"><%= review.rating %></span>
+        <span class="username"><%= review.author %></span><br>
+        <span class="review"><%= review.content_body %></span>
+      </p>
+    </li>
+  <% end %>
+</ul>
+</div>
