@@ -11,9 +11,9 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @list= List.find(params[:id])
-    if @list.update(list_params)
-      redirect_to lists_path
+    @product= product.find(params[:id])
+    if @product.update(product_params)
+      redirect_to product_path(product)
     else
       render :edit
     end
@@ -24,3 +24,8 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 end
+
+private
+ def list_params
+   params.require(:product).permit(:name, :cost, :country)
+ end
