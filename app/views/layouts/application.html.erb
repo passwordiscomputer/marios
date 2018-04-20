@@ -5,11 +5,25 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
-  </body>
-</html>
+    <body>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="/" class="brand-logo">
+              <i class="material-icons logo-icon nav-logo">book</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li><%= link_to "All Products", products_path %></li>
+              <li><%= link_to "New Product", new_product_path %></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <%= yield %>
+    </body>
+  </html>
