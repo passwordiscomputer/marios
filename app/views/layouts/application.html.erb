@@ -10,22 +10,22 @@
   </head>
 
   <body>
-    <body>
-      <div class="navbar-fixed">
-        <nav>
-          <div class="nav-wrapper">
-            <a href="/" class="brand-logo">
-              <i class="material-icons logo-icon nav-logo">book</i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-              <li><%= link_to "All Products", products_path %></li>
-              <li><%= link_to "New Product", new_product_path %></li>
-            </ul>
-          </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-primary">
+      <a class="navbar-brand" href="/">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <li><%= link_to "All Products", products_path, class: "nav-item nav-link" %></li>
+
+        </div>
       </div>
+    </nav>
+    <div class="container main-content">
       <%= flash[:alert] %>
       <%= flash[:notice] %>
       <%= yield %>
-    </body>
-  </html>
+    </div>
+  </body>
+</html>
