@@ -1,11 +1,11 @@
-<h1>Products</h1>
+<div class="logo"><b>PR<span>OD</span><span>U</span>CT</b></div>
 <div class="row">
   <% @products.each do |product| %>
-  <div class="col-sm-4">
+  <div class="col-sm-3">
     <div class="card horizontal">
       <div class="card-stacked">
         <div class="card-content">
-          <p><%=product.name %></p>
+          <p class="title"><%=product.name %></p>
             <p>$<%=product.cost %></p>
           </div>
           <div class="card-action">
@@ -17,4 +17,7 @@
     <% end %>
 </div>
 
-<%= will_paginate @users %>
+<div class="fixed-bottom">
+  <%= will_paginate @users %>
+
+</div>
