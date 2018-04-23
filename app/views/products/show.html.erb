@@ -1,18 +1,18 @@
 <div class="row">
-  <div><%= @product.name %></div>
+  <div class="product-title"><%= @product.name %></div>
 </div>
-
-<ul class="collection">
+<div class="logo"><b>RE<span>V</span><span>IE</span>WS</b></div>
+<ol class="list-group">
   <% @reviews.each do |review| %>
-    <li class="collection-item avatar">
+    <li class="list-group-item">
       <p>
-        <span class="rating"><%= review.rating %></span>
         <span class="username"><%= review.author %></span><br>
+        <span class="rating"><%= review.rating %>/5</span>
         <span class="review"><%= review.content_body %></span>
       </p>
     </li>
   <% end %>
-</ul>
+</ol>
 <p><%= link_to "Add Review", new_product_review_path(@product) %></p>
 
 

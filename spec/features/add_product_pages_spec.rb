@@ -8,6 +8,6 @@ describe "the add a Product process" do
     fill_in 'Cost', :with => 20
     fill_in 'Country', :with => 'USA'
     click_on 'Create Product'
-    expect(page).to have_content 'Products'
+    expect(page).to have_content 'Review was succesfully added'
   end
 end

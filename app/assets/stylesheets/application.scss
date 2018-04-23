@@ -9,12 +9,22 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-
+#new_review{
+  background-color:rgba(255, 255, 255, 0.6);
+}
+.product-title{
+  color: #C0C0C0;
+  font-size: 24px;
+}
 .main-content{
   padding-top: 70px;
 }
 
 .pagination{
+  background-color:rgba(255, 255, 255, 0.6);
+}
+
+.list-group-item{
   background-color:rgba(255, 255, 255, 0.6);
 }
 
@@ -27,6 +37,9 @@ body {
     font-weight: bold;
     border-bottom: 2px solid 	#C0C0C0;
   }
+}
+.rating{
+  font-weight: bold;
 }
 // neon
 

@@ -1,31 +1,29 @@
+<div class="logo"><b>H<span>O</span><span>M</span>E</b></div>
 <div class="row">
   <div class="col-lg-4">
     <div class="card">
           <div class="card-body">
             <h5 class="card-title">Most Reviewed Item</h5>
-            <p class="card-text"<%= @popular_product.name %></p>
+            <p class="card-text"><%= link_to @popular_product.name, product_path(@popular_product) %></p>
           </div>
         </div>
-    <h1>Most Reviewed Item</h1>
-      <ul>
-        <li><%= @popular_product.name %></li>
-      </ul>
   </div>
   <div class="col-lg-4">
-    <h1>Newest Items</h1>
-      <ol>
-        <% @recent_products.each do |product| %>
-          <li><%= product.name %></li>
-        <% end %>
-      </ol>
+    <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Newest Items</h5>
+              <% @recent_products.each do |product| %>
+                <p><%= link_to product.name, product_path(product) %></p>
+              <% end %>
+          </div>
+        </div>
   </div>
   <div class="col-lg-4">
-    <h1>Local Items</h1>
-    <ol>
-      <% @local_products.each do |product| %>
-        <li><%= product.name %></li>
-      <% end %>
-    </ol>
+    <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Most Reviewed Item</h5>
+            <p class="card-text"><%= link_to @popular_product.name, product_path(@popular_product) %></p>
+          </div>
+        </div>
   </div>
-
 </div>
